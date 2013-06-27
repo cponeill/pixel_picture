@@ -1,5 +1,9 @@
+/* Still working on this code... 6/27/13 */
+
 import SimpleOpenNI.*;
 SimpleOpenNI context;
+
+int closestValue, closestX, closestY;
 
 void setup()
 {
@@ -12,6 +16,9 @@ void setup()
 void draw()
 {
   context.update();
+  closetValue = 8000;
+  
+  int[] depthValue = context.depthMap();
   
   PImage depth = context.depthImage();
   PImage rgb = context.rgbImage();
